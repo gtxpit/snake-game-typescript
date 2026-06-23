@@ -17,7 +17,7 @@ function drawGame(): void {
     paint.fillStyle = '#00ff00';   // зелёный
     paint.fillRect(10, 10, 20, 20);
     
-    const cellSize = 20
+    // const cellSize = 20
     const gridSize = 20
 
     paint.strokeStyle = '#2a4a2a'

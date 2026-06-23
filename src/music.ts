@@ -50,7 +50,7 @@ function togglePlay(): void {
 
 
 const volumeSlider = document.getElementById('volume-slider') as HTMLInputElement
-volumeSlider.addEventListener('input', (event) => {
+volumeSlider.addEventListener('input', () => {
     const volume = parseInt(volumeSlider.value) / 100
     audio.volume = volume
 })
