@@ -98,7 +98,7 @@ button {
 #game-container {
     display: none;
     position: fixed;
-    top: 47.5%; 
+    top: 47.5%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 200;
@@ -144,6 +144,7 @@ button {
         display: none;
     }
 }
+
 .snake-img {
     position: relative;
     display: inline-block;
@@ -159,7 +160,7 @@ button {
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.85);
-    color:#ffc311;
+    color: #ffc311;
     padding: 8px 14px;
     border-radius: 8px;
     font-size: 14px;
@@ -173,4 +174,33 @@ button {
 
 .snake-img:hover::after {
     opacity: 1;
+}
+
+@media(max-width:320px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    img {
+        width: 200px;
+    }
+
+    .audio-player {
+        margin-top: 50px;
+        font-size: 20px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 768px) {
+    img {
+        width: 300px;
+        margin-left: 50px;
+    }
+}
+
+@media(min-width:1440px) {
+    img {
+        width: 400px;
+    }
 }
