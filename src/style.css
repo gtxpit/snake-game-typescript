@@ -139,11 +139,38 @@ button {
     box-shadow: 2px 2px 0px #000000;
 }
 
-/* Показываем мобильные стрелки только на телефонах */
 @media (min-width: 769px) {
     #mobile-controls {
         display: none;
     }
 }
+.snake-img {
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: help;
+}
 
+.snake-img::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.85);
+    color:#ffc311;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: 'Press Start 2P', cursive;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    border: 2px solid #d3a722;
+    box-shadow: 4px 4px 0px #000000;
+}
 
+.snake-img:hover::after {
+    opacity: 1;
+}
