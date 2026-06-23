@@ -13,6 +13,7 @@ const paint = canvasGame.getContext('2d')
 
 
 function drawGame(): void {
+    if (!paint) return
     paint.fillStyle = '#00ff00';   // зелёный
     paint.fillRect(10, 10, 20, 20);
     
