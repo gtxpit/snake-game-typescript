@@ -185,7 +185,12 @@ button {
         width: 200px;
     }
 
+    .game-container {
+        width: 200px;
+    }
+
     .audio-player {
+        width: 150px;
         margin-top: 50px;
         font-size: 20px;
         padding: 5px;
@@ -203,4 +208,13 @@ button {
     img {
         width: 400px;
     }
+}
+
+
+#btnEndGame {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ffc400;
+    width: 250px;
+    height: 25px;
+    margin-right: 20px;
 }
