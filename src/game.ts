@@ -45,20 +45,17 @@ export function moveSnake() {
     let x = snake[0][0]
     let y = snake[0][1]
     let newHead: [number, number] = [x, y]
-
-    // 1. Вычисляем новую голову
+    
     if (direction === 'right') newHead = [x + 1, y]
     else if (direction === 'left') newHead = [x - 1, y]
     else if (direction === 'up') newHead = [x, y - 1]
     else if (direction === 'down') newHead = [x, y + 1]
 
-    // 2. Проверка стены (с новой головой)
     if (newHead[0] < 0 || newHead[0] >= 20 || newHead[1] < 0 || newHead[1] >= 20) {
         gameOver()
         return
     }
 
-    // 3. Проверка столкновения с собой
     for (let i = 0; i < snake.length; i++) {
         if (snake[i][0] === newHead[0] && snake[i][1] === newHead[1]) {
             gameOver()
@@ -66,10 +63,8 @@ export function moveSnake() {
         }
     }
 
-    // 4. Вставляем новую голову
     snake.unshift(newHead)
 
-    // 5. Проверка еды
     if (newHead[0] === food[0] && newHead[1] === food[1]) {
         score++
         food = [Math.floor(Math.random() * 20), Math.floor(Math.random() * 20)]
@@ -77,6 +72,5 @@ export function moveSnake() {
         snake.pop()
     }
 
-    // 6. Перерисовка
     drawGame()
 }
